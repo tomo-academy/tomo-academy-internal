@@ -297,26 +297,25 @@ END:VCARD`;
               </div>
 
               {/* Bottom - Compact QR and NFC */}
-              <div className="flex items-end justify-between gap-2 mt-1.5">
+              <div className="flex items-center justify-between gap-3 mt-2">
                 {/* QR Code */}
-                <div className="flex flex-col items-center gap-0.5">
-                  <div className="p-1.5 bg-white dark:bg-slate-800 rounded-lg shadow-sm border border-pink-300/60 dark:border-pink-700/60">
-                    <QRCode value={profileUrl} size={40} />
+                <div className="flex flex-col items-center gap-1">
+                  <div className="p-1 bg-white dark:bg-slate-800 rounded-md shadow-sm border border-pink-200/60 dark:border-pink-700/60">
+                    <QRCode value={profileUrl} size={36} />
                   </div>
-                  <span className="text-[8px] text-pink-600 dark:text-pink-400 font-bold">Scan</span>
+                  <span className="text-[8px] text-pink-600 dark:text-pink-400 font-semibold">Scan</span>
                 </div>
 
-                {/* NFC Icon */}
-                <div className="flex flex-col items-center gap-0.5">
-                  <div className="relative w-11 h-11 rounded-full bg-gradient-to-br from-pink-500 via-pink-600 to-purple-600 flex items-center justify-center shadow-md hover:shadow-lg transition-all cursor-pointer">
-                    <svg className="w-6 h-6 text-white drop-shadow-md" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-                      <path d="M6 8.32a7.43 7.43 0 0 1 0 7.36" />
-                      <path d="M9.46 6.21a11.76 11.76 0 0 1 0 11.58" />
-                      <path d="M12.91 4.1a15.91 15.91 0 0 1 0 15.8" />
-                      <path d="M16.37 2a20.16 20.16 0 0 1 0 20" />
+                {/* NFC Icon - Professional Design */}
+                <div className="flex flex-col items-center gap-1">
+                  <div className="relative w-10 h-10 rounded-lg bg-gradient-to-br from-pink-500 to-purple-600 flex items-center justify-center shadow-md hover:shadow-lg hover:scale-105 transition-all cursor-pointer group/nfc">
+                    <div className="absolute inset-0 bg-white/10 rounded-lg" />
+                    <svg className="w-5 h-5 text-white relative z-10" viewBox="0 0 24 24" fill="currentColor">
+                      <path d="M20 2H4c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zM4 20V4h16v16H4zm4.5-6.5v-3c0-.83.67-1.5 1.5-1.5s1.5.67 1.5 1.5v3c0 .83-.67 1.5-1.5 1.5s-1.5-.67-1.5-1.5zm6 3v-7c0-.83.67-1.5 1.5-1.5s1.5.67 1.5 1.5v7c0 .83-.67 1.5-1.5 1.5s-1.5-.67-1.5-1.5z"/>
                     </svg>
+                    <div className="absolute inset-0 rounded-lg bg-pink-400/20 opacity-0 group-hover/nfc:opacity-100 animate-pulse transition-opacity" />
                   </div>
-                  <span className="text-[8px] text-purple-600 dark:text-purple-400 font-bold">Tap</span>
+                  <span className="text-[8px] text-purple-600 dark:text-purple-400 font-semibold">Tap</span>
                 </div>
               </div>
             </div>
@@ -344,32 +343,31 @@ END:VCARD`;
               </div>
             </div>
 
-            {/* Center Section - Large Stylish NFC Icon */}
+            {/* Center Section - Professional NFC Icon */}
             <div className="flex flex-col items-center justify-center flex-1 py-2">
               <div className="relative group/nfc-back">
-                {/* Animated Pink Rings */}
+                {/* Subtle Animated Rings */}
                 <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="w-24 h-24 rounded-full bg-pink-400/20 animate-ping" style={{ animationDuration: '2s' }} />
+                  <div className="w-20 h-20 rounded-full border-2 border-pink-400/30 animate-ping" style={{ animationDuration: '2.5s' }} />
                 </div>
                 <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="w-20 h-20 rounded-full bg-purple-400/20 animate-pulse" />
+                  <div className="w-16 h-16 rounded-full border-2 border-purple-400/30 animate-pulse" />
                 </div>
                 
-                {/* Main NFC Icon with Pink Gradient */}
-                <div className="relative w-18 h-18 rounded-full bg-gradient-to-br from-pink-500 via-pink-600 to-purple-600 flex items-center justify-center shadow-xl hover:shadow-2xl hover:shadow-pink-500/40 transition-all hover:scale-110 cursor-pointer">
-                  <div className="absolute inset-0 rounded-full bg-gradient-to-br from-white/20 to-transparent" />
-                  <svg className="w-10 h-10 text-white drop-shadow-lg relative z-10" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-                    <path d="M6 8.32a7.43 7.43 0 0 1 0 7.36" />
-                    <path d="M9.46 6.21a11.76 11.76 0 0 1 0 11.58" />
-                    <path d="M12.91 4.1a15.91 15.91 0 0 1 0 15.8" />
-                    <path d="M16.37 2a20.16 20.16 0 0 1 0 20" />
+                {/* Main NFC Icon - Professional Square Design */}
+                <div className="relative w-16 h-16 rounded-2xl bg-gradient-to-br from-pink-500 via-pink-600 to-purple-600 flex items-center justify-center shadow-2xl hover:shadow-pink-500/50 transition-all hover:scale-105 cursor-pointer">
+                  <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-white/10 to-transparent" />
+                  <div className="absolute inset-0 rounded-2xl border border-white/20" />
+                  {/* Professional NFC Icon */}
+                  <svg className="w-9 h-9 text-white relative z-10" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M20 2H4c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zM4 20V4h16v16H4zm4.5-6.5v-3c0-.83.67-1.5 1.5-1.5s1.5.67 1.5 1.5v3c0 .83-.67 1.5-1.5 1.5s-1.5-.67-1.5-1.5zm6 3v-7c0-.83.67-1.5 1.5-1.5s1.5.67 1.5 1.5v7c0 .83-.67 1.5-1.5 1.5s-1.5-.67-1.5-1.5z"/>
                   </svg>
                 </div>
               </div>
-              <div className="flex items-center gap-1 mt-2">
-                <Sparkles className="w-2.5 h-2.5 text-pink-500 animate-pulse" />
-                <p className="text-[10px] text-slate-600 dark:text-slate-400 font-semibold">Tap your device here</p>
-                <Sparkles className="w-2.5 h-2.5 text-purple-500 animate-pulse" style={{ animationDelay: '0.5s' }} />
+              <div className="flex items-center gap-1 mt-2.5">
+                <div className="w-1 h-1 rounded-full bg-pink-500 animate-pulse" />
+                <p className="text-[10px] text-slate-700 dark:text-slate-300 font-bold">Tap your device here</p>
+                <div className="w-1 h-1 rounded-full bg-purple-500 animate-pulse" style={{ animationDelay: '0.5s' }} />
               </div>
             </div>
 
