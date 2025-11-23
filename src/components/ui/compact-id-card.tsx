@@ -310,39 +310,23 @@ END:VCARD`;
           </div>
         </Card>
 
-        {/* BACK SIDE - Stylish Professional Design */}
+        {/* BACK SIDE - Premium White with Pink Accents */}
         <Card className={cn(
           "absolute inset-0 backface-hidden rotate-y-180 overflow-hidden",
-          "bg-gradient-to-br from-pink-600 via-purple-600 to-pink-700 dark:from-pink-900 dark:via-purple-900 dark:to-pink-950",
-          "border-2 border-pink-300/30 shadow-2xl"
+          "bg-gradient-to-br from-white via-pink-50/50 to-purple-50/40 dark:from-slate-900 dark:via-pink-950/20 dark:to-slate-900",
+          "border-2 border-pink-200/50 dark:border-pink-800/50 shadow-xl"
         )}>
-          {/* Sophisticated Background Pattern */}
-          <div className="absolute inset-0">
-            {/* Radial gradient overlay */}
-            <div className="absolute inset-0 bg-gradient-radial from-white/5 via-transparent to-black/10" />
-            
-            {/* Geometric patterns */}
-            <div className="absolute inset-0 opacity-10">
-              <div className="absolute top-0 right-0 w-32 h-32 border-4 border-white/20 rounded-full -translate-y-16 translate-x-16" />
-              <div className="absolute bottom-0 left-0 w-40 h-40 border-4 border-white/20 rounded-full translate-y-20 -translate-x-20" />
-              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-48 h-48 border-2 border-white/10 rounded-full" />
-            </div>
-            
-            {/* Subtle animated glow */}
-            <div className="absolute top-1/4 right-1/4 w-32 h-32 bg-white/5 rounded-full blur-3xl animate-pulse" style={{ animationDuration: '4s' }} />
-            <div className="absolute bottom-1/4 left-1/4 w-32 h-32 bg-purple-300/5 rounded-full blur-3xl animate-pulse" style={{ animationDuration: '5s', animationDelay: '1s' }} />
-          </div>
+          {/* Premium gradient overlay with decorative corners */}
+          <div className="absolute inset-0 bg-gradient-to-br from-pink-100/20 via-transparent to-purple-100/20 dark:from-pink-950/10 dark:via-transparent dark:to-purple-950/10" />
+          <div className="absolute top-0 right-0 w-20 h-20 bg-gradient-to-bl from-pink-400/10 to-transparent rounded-bl-3xl" />
+          <div className="absolute bottom-0 left-0 w-20 h-20 bg-gradient-to-tr from-purple-400/10 to-transparent rounded-tr-3xl" />
 
-          {/* Elegant corner accents */}
-          <div className="absolute top-0 right-0 w-20 h-20 border-t-2 border-r-2 border-white/20 rounded-tr-2xl" />
-          <div className="absolute bottom-0 left-0 w-20 h-20 border-b-2 border-l-2 border-white/20 rounded-bl-2xl" />
-
-          {/* Main Content */}
-          <div className="relative flex flex-col h-full p-2 justify-between">
-            {/* Top - Elegant Header */}
+          {/* Main Content - Perfectly Fitted */}
+          <div className="relative flex flex-col h-full p-2.5 justify-between">
+            {/* Top - Premium Header */}
             <div className="flex items-center justify-between">
-              <div className="flex items-center gap-1">
-                <div className="w-6 h-6 bg-white/15 backdrop-blur-xl rounded-md flex items-center justify-center border border-white/25 shadow-xl">
+              <div className="flex items-center gap-1.5">
+                <div className="w-6 h-6 bg-gradient-to-br from-pink-100 to-purple-100 dark:from-pink-900 dark:to-purple-900 rounded-lg flex items-center justify-center border border-pink-300/50 dark:border-pink-700/50 shadow-md">
                   <img 
                     src="/cropped_circle_image (1).png" 
                     alt="Logo" 
@@ -354,76 +338,72 @@ END:VCARD`;
                   />
                 </div>
                 <div>
-                  <p className="text-white font-black text-[9px] leading-none tracking-wider">TOMO ACADEMY</p>
-                  <p className="text-white/90 text-[6px] font-semibold tracking-wide mt-0.5">EDUCATION ELEVATED</p>
+                  <p className="font-black text-[9px] leading-none tracking-wide bg-gradient-to-r from-pink-600 to-purple-600 bg-clip-text text-transparent">TOMO ACADEMY</p>
+                  <p className="text-[6px] font-semibold text-slate-600 dark:text-slate-400 mt-0.5">EDUCATION ELEVATED</p>
                 </div>
               </div>
-              <div className="px-1.5 py-0.5 bg-white/15 backdrop-blur-xl rounded-md border border-white/25">
-                <p className="text-white text-[8px] font-bold leading-none">MEMBER</p>
-                <p className="text-white/80 text-[6px] text-center mt-0.5">2025</p>
+              <div className="px-1.5 py-0.5 bg-gradient-to-r from-pink-500 to-purple-600 rounded-md shadow-md">
+                <p className="text-white text-[7px] font-bold leading-none">MEMBER</p>
+                <p className="text-white/90 text-[6px] text-center">2025</p>
               </div>
             </div>
 
             {/* Center - QR Code Section */}
-            <div className="flex flex-col items-center justify-center flex-1 py-1">
+            <div className="flex flex-col items-center justify-center flex-1">
               <div className="relative">
-                {/* Elegant animated rings */}
+                {/* Subtle animated rings */}
                 <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="w-20 h-20 rounded-xl border border-white/15 animate-ping" style={{ animationDuration: '3s' }} />
-                </div>
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="w-16 h-16 rounded-lg border border-white/25 animate-pulse" style={{ animationDuration: '2s' }} />
+                  <div className="w-16 h-16 rounded-lg border border-pink-300/30 dark:border-pink-700/30 animate-ping" style={{ animationDuration: '3s' }} />
                 </div>
                 
-                {/* QR Code with elegant frame */}
-                <div className="relative p-2 bg-white rounded-lg shadow-2xl border-2 border-white/90">
-                  <QRCode value={profileUrl} size={44} />
+                {/* QR Code with premium frame */}
+                <div className="relative p-1.5 bg-white dark:bg-slate-800 rounded-lg shadow-xl border-2 border-pink-300/60 dark:border-pink-700/60">
+                  <QRCode value={profileUrl} size={48} />
                 </div>
               </div>
               
-              {/* Scan instruction with elegant styling */}
-              <div className="mt-2 flex items-center gap-1 px-2.5 py-1 bg-white/15 backdrop-blur-xl rounded-full border border-white/25 shadow-xl">
-                <div className="w-1 h-1 rounded-full bg-white animate-pulse" />
-                <p className="text-white text-[8px] font-bold tracking-wider">SCAN TO VIEW PROFILE</p>
-                <div className="w-1 h-1 rounded-full bg-white animate-pulse" style={{ animationDelay: '0.5s' }} />
+              {/* Scan instruction */}
+              <div className="mt-2 flex items-center gap-1 px-2.5 py-0.5 bg-gradient-to-r from-pink-500/10 to-purple-500/10 backdrop-blur-sm rounded-full border border-pink-300/60 dark:border-pink-700/60">
+                <Eye className="w-2.5 h-2.5 text-pink-600 dark:text-pink-400" />
+                <p className="font-bold text-[7px] bg-gradient-to-r from-pink-600 to-purple-600 bg-clip-text text-transparent">SCAN TO VIEW PROFILE</p>
               </div>
             </div>
 
-            {/* Bottom - Professional Contact Section */}
+            {/* Bottom - Contact Section */}
             <div className="space-y-1">
-              {/* Contact Information */}
+              {/* Contact Grid */}
               <div className="grid grid-cols-2 gap-1">
-                <div className="flex flex-col items-center gap-0.5 p-1 bg-white/10 backdrop-blur-xl rounded-md border border-white/20 hover:bg-white/15 transition-all">
-                  <Globe className="w-2.5 h-2.5 text-white" />
-                  <span className="text-white text-[7px] font-bold text-center leading-tight">tomoacademy.com</span>
+                <div className="flex items-center gap-1 px-1.5 py-0.5 bg-gradient-to-r from-pink-50 to-purple-50 dark:from-pink-950/30 dark:to-purple-950/30 rounded-md border border-pink-300/50 dark:border-pink-700/50">
+                  <Globe className="w-2 h-2 text-pink-600 dark:text-pink-400 flex-shrink-0" />
+                  <span className="text-[6px] font-bold text-pink-900 dark:text-pink-200 truncate">tomoacademy.com</span>
                 </div>
-                <div className="flex flex-col items-center gap-0.5 p-1 bg-white/10 backdrop-blur-xl rounded-md border border-white/20 hover:bg-white/15 transition-all">
-                  <Mail className="w-2.5 h-2.5 text-white" />
-                  <span className="text-white text-[7px] font-bold text-center leading-tight">support@tomo</span>
+                <div className="flex items-center gap-1 px-1.5 py-0.5 bg-gradient-to-r from-purple-50 to-pink-50 dark:from-purple-950/30 dark:to-pink-950/30 rounded-md border border-purple-300/50 dark:border-purple-700/50">
+                  <Mail className="w-2 h-2 text-purple-600 dark:text-purple-400 flex-shrink-0" />
+                  <span className="text-[6px] font-bold text-purple-900 dark:text-purple-200 truncate">support@tomo</span>
                 </div>
               </div>
 
-              {/* Social Media Links */}
-              <div className="flex items-center justify-center gap-1.5 p-1 bg-white/10 backdrop-blur-xl rounded-md border border-white/20">
-                <span className="text-white text-[7px] font-bold tracking-wide">FOLLOW:</span>
+              {/* Social Media Bar */}
+              <div className="flex items-center justify-center gap-2 px-2 py-0.5 bg-gradient-to-r from-pink-50 to-purple-50 dark:from-pink-950/20 dark:to-purple-950/20 rounded-md border border-pink-300/50 dark:border-pink-700/50">
+                <span className="text-[6px] font-bold text-slate-700 dark:text-slate-300">FOLLOW:</span>
                 <a href="https://youtube.com/@tomoacademy" target="_blank" rel="noopener noreferrer" 
                    onClick={(e) => e.stopPropagation()}
-                   className="w-5 h-5 rounded-md bg-white/15 flex items-center justify-center hover:bg-white/25 transition-all hover:scale-110 border border-white/25">
-                  <svg className="w-3 h-3 text-white" viewBox="0 0 24 24" fill="currentColor">
+                   className="w-4 h-4 rounded bg-gradient-to-br from-red-500/10 to-red-600/10 flex items-center justify-center hover:from-red-500/20 hover:to-red-600/20 transition-all border border-red-300/50 dark:border-red-700/50 hover:scale-110">
+                  <svg className="w-2.5 h-2.5 text-red-600 dark:text-red-500" viewBox="0 0 24 24" fill="currentColor">
                     <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
                   </svg>
                 </a>
                 <a href="https://instagram.com/tomoacademy" target="_blank" rel="noopener noreferrer"
                    onClick={(e) => e.stopPropagation()}
-                   className="w-5 h-5 rounded-md bg-white/15 flex items-center justify-center hover:bg-white/25 transition-all hover:scale-110 border border-white/25">
-                  <Instagram className="w-3 h-3 text-white" />
+                   className="w-4 h-4 rounded bg-gradient-to-br from-pink-500/10 to-purple-600/10 flex items-center justify-center hover:from-pink-500/20 hover:to-purple-600/20 transition-all border border-pink-300/50 dark:border-pink-700/50 hover:scale-110">
+                  <Instagram className="w-2.5 h-2.5 text-pink-600 dark:text-pink-500" />
                 </a>
               </div>
 
-              {/* Elegant Footer */}
-              <div className="text-center pt-0.5 border-t border-white/20">
-                <p className="text-white text-[7px] font-bold tracking-wide leading-tight">OFFICIAL MEMBER CARD</p>
-                <p className="text-white/80 text-[6px] leading-tight">Valid 2025 • Unauthorized use prohibited</p>
+              {/* Footer */}
+              <div className="text-center pt-0.5 border-t border-pink-200/50 dark:border-pink-800/50">
+                <p className="text-[6px] font-bold bg-gradient-to-r from-pink-600 to-purple-600 bg-clip-text text-transparent leading-tight">OFFICIAL MEMBER CARD</p>
+                <p className="text-[5px] text-slate-600 dark:text-slate-400 leading-tight">Valid 2025 • Unauthorized use prohibited</p>
               </div>
             </div>
           </div>
