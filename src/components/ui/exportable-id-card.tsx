@@ -1,7 +1,3 @@
-import { Card } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
-import { Shield, MapPin, Verified, Eye, Globe, Mail } from "lucide-react";
-import { Instagram } from "lucide-react";
 import QRCode from "react-qr-code";
 
 interface ExportableIDCardProps {
@@ -25,7 +21,7 @@ export function ExportableIDCard({ employee, side }: ExportableIDCardProps) {
         <img
           src={employee.photo}
           alt={employee.name}
-          className="w-full h-full object-cover"
+          style={{ width: '100%', height: '100%', objectFit: 'cover' }}
           crossOrigin="anonymous"
         />
       );
@@ -39,7 +35,17 @@ export function ExportableIDCard({ employee, side }: ExportableIDCardProps) {
       .slice(0, 2);
     
     return (
-      <div className="w-full h-full flex items-center justify-center bg-gradient-to-br from-pink-400 to-purple-500 text-white font-bold text-xl">
+      <div style={{ 
+        width: '100%', 
+        height: '100%', 
+        display: 'flex', 
+        alignItems: 'center', 
+        justifyContent: 'center', 
+        background: 'linear-gradient(135deg, #ec4899, #a855f7)',
+        color: 'white',
+        fontWeight: 'bold',
+        fontSize: '20px'
+      }}>
         {initials}
       </div>
     );
@@ -47,152 +53,423 @@ export function ExportableIDCard({ employee, side }: ExportableIDCardProps) {
 
   if (side === 'front') {
     return (
-      <Card className="w-[320px] h-[200px] bg-gradient-to-br from-white via-pink-50/50 to-purple-50/40 border-2 border-pink-200/50 shadow-xl overflow-hidden">
-        {/* Gradient overlays */}
-        <div className="absolute inset-0 bg-gradient-to-br from-pink-100/20 via-transparent to-purple-100/20" />
-        <div className="absolute top-0 right-0 w-20 h-20 bg-gradient-to-bl from-pink-400/10 to-transparent rounded-bl-3xl" />
-        <div className="absolute bottom-0 left-0 w-20 h-20 bg-gradient-to-tr from-purple-400/10 to-transparent rounded-tr-3xl" />
-
+      <div style={{
+        width: '320px',
+        height: '200px',
+        background: 'linear-gradient(135deg, #ffffff 0%, #fce7f3 50%, #f3e8ff 100%)',
+        border: '2px solid rgba(251, 207, 232, 0.5)',
+        borderRadius: '8px',
+        overflow: 'hidden',
+        position: 'relative',
+        fontFamily: 'system-ui, -apple-system, sans-serif'
+      }}>
         {/* Header */}
-        <div className="relative h-10 bg-gradient-to-r from-pink-600 via-pink-500 to-pink-600 flex items-center justify-between px-2.5">
-          <div className="flex items-center gap-1.5">
-            <div className="w-6 h-6 bg-white rounded-lg flex items-center justify-center p-0.5">
-              <img src="/cropped_circle_image (1).png" alt="TOMO Academy" className="w-full h-full object-contain" />
+        <div style={{
+          height: '40px',
+          background: 'linear-gradient(90deg, #db2777, #ec4899, #db2777)',
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'space-between',
+          padding: '0 10px',
+          position: 'relative'
+        }}>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '6px', zIndex: 10 }}>
+            <div style={{
+              width: '24px',
+              height: '24px',
+              background: 'white',
+              borderRadius: '8px',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              padding: '2px'
+            }}>
+              <img src="/cropped_circle_image (1).png" alt="TOMO" style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
             </div>
-            <div className="text-white">
-              <p className="font-bold text-[10px] leading-none tracking-wide flex items-center gap-0.5">
-                TOMO ACADEMY
-                <Verified className="w-2.5 h-2.5" />
+            <div style={{ color: 'white' }}>
+              <p style={{ fontSize: '10px', fontWeight: 'bold', margin: 0, lineHeight: '1', letterSpacing: '0.5px' }}>
+                TOMO ACADEMY ✓
               </p>
-              <p className="text-[8px] opacity-90 leading-tight">EDUCATION ELEVATED</p>
+              <p style={{ fontSize: '8px', margin: 0, opacity: 0.9, lineHeight: '1.2' }}>EDUCATION ELEVATED</p>
             </div>
           </div>
-          <div className="flex items-center gap-0.5 bg-white/20 backdrop-blur-sm px-1.5 py-0.5 rounded text-white text-[8px] font-bold">
-            <Shield className="w-2 h-2" />
-            <span>ID</span>
+          <div style={{
+            display: 'flex',
+            alignItems: 'center',
+            gap: '2px',
+            background: 'rgba(255, 255, 255, 0.2)',
+            backdropFilter: 'blur(8px)',
+            padding: '2px 6px',
+            borderRadius: '4px',
+            color: 'white',
+            fontSize: '8px',
+            fontWeight: 'bold',
+            zIndex: 10
+          }}>
+            🛡️ ID
           </div>
         </div>
 
         {/* Main Content */}
-        <div className="relative h-[calc(200px-40px)] flex items-center px-2.5 py-2 gap-2.5">
+        <div style={{
+          height: 'calc(200px - 40px)',
+          display: 'flex',
+          alignItems: 'center',
+          padding: '8px 10px',
+          gap: '10px'
+        }}>
           {/* Photo */}
-          <div className="flex-shrink-0">
-            <div className="relative w-20 h-20 rounded-xl bg-gradient-to-br from-pink-100 to-purple-100 border-2 border-pink-200/50 shadow-md overflow-hidden">
-              {renderAvatar()}
-            </div>
+          <div style={{
+            width: '80px',
+            height: '80px',
+            borderRadius: '12px',
+            background: 'linear-gradient(135deg, #fce7f3, #f3e8ff)',
+            border: '2px solid rgba(251, 207, 232, 0.5)',
+            overflow: 'hidden',
+            flexShrink: 0
+          }}>
+            {renderAvatar()}
           </div>
 
           {/* Info */}
-          <div className="flex-1 min-w-0 flex flex-col justify-between h-full">
-            <div className="space-y-1">
-              <div>
-                <h2 className="font-black text-base leading-tight bg-gradient-to-r from-pink-600 via-pink-500 to-purple-600 bg-clip-text text-transparent truncate">{employee.name}</h2>
-                <p className="text-[10px] text-slate-700 font-bold mt-0.5 truncate">{employee.role}</p>
+          <div style={{
+            flex: 1,
+            display: 'flex',
+            flexDirection: 'column',
+            justifyContent: 'space-between',
+            height: '100%',
+            minWidth: 0
+          }}>
+            <div style={{ marginBottom: '4px' }}>
+              <h2 style={{
+                fontSize: '16px',
+                fontWeight: '900',
+                background: 'linear-gradient(90deg, #db2777, #ec4899, #a855f7)',
+                WebkitBackgroundClip: 'text',
+                WebkitTextFillColor: 'transparent',
+                backgroundClip: 'text',
+                margin: 0,
+                lineHeight: '1.2',
+                overflow: 'hidden',
+                textOverflow: 'ellipsis',
+                whiteSpace: 'nowrap'
+              }}>
+                {employee.name}
+              </h2>
+              <p style={{
+                fontSize: '10px',
+                color: '#334155',
+                fontWeight: 'bold',
+                margin: '2px 0 0 0',
+                overflow: 'hidden',
+                textOverflow: 'ellipsis',
+                whiteSpace: 'nowrap'
+              }}>
+                {employee.role}
+              </p>
+            </div>
+
+            <div style={{ marginBottom: '4px' }}>
+              <div style={{
+                display: 'flex',
+                alignItems: 'center',
+                gap: '4px',
+                background: 'linear-gradient(90deg, #fce7f3, #fce7f3)',
+                padding: '2px 6px',
+                borderRadius: '6px',
+                border: '1px solid rgba(251, 207, 232, 0.5)',
+                fontSize: '9px',
+                marginBottom: '2px'
+              }}>
+                <span>🛡️</span>
+                <span style={{ fontFamily: 'monospace', fontWeight: 'bold', color: '#831843' }}>
+                  {employee.employeeId}
+                </span>
               </div>
-              
-              <div className="space-y-0.5">
-                <div className="flex items-center gap-1 text-[9px] bg-gradient-to-r from-pink-50 to-pink-100/50 px-1.5 py-0.5 rounded-md border border-pink-300/50">
-                  <Shield className="w-2 h-2 text-pink-600 flex-shrink-0" />
-                  <span className="font-mono font-bold text-pink-900 truncate">{employee.employeeId}</span>
-                </div>
-                <div className="flex items-center gap-1 text-[9px] bg-gradient-to-r from-purple-50 to-purple-100/50 px-1.5 py-0.5 rounded-md border border-purple-300/50">
-                  <MapPin className="w-2 h-2 text-purple-600 flex-shrink-0" />
-                  <span className="font-semibold text-purple-900 truncate">{employee.location || 'Remote'}</span>
-                </div>
+              <div style={{
+                display: 'flex',
+                alignItems: 'center',
+                gap: '4px',
+                background: 'linear-gradient(90deg, #f3e8ff, #f3e8ff)',
+                padding: '2px 6px',
+                borderRadius: '6px',
+                border: '1px solid rgba(233, 213, 255, 0.5)',
+                fontSize: '9px'
+              }}>
+                <span>📍</span>
+                <span style={{ fontWeight: '600', color: '#581c87' }}>
+                  {employee.location || 'Remote'}
+                </span>
               </div>
             </div>
 
             {/* QR Code */}
-            <div className="flex items-center justify-center mt-1">
-              <div className="flex flex-col items-center gap-0.5">
-                <div className="p-1 bg-white rounded-md shadow-md border-2 border-pink-300/60">
+            <div style={{
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              marginTop: '4px'
+            }}>
+              <div style={{
+                display: 'flex',
+                flexDirection: 'column',
+                alignItems: 'center',
+                gap: '2px'
+              }}>
+                <div style={{
+                  padding: '4px',
+                  background: 'white',
+                  borderRadius: '6px',
+                  border: '2px solid rgba(251, 207, 232, 0.6)'
+                }}>
                   <QRCode value={profileUrl} size={36} />
                 </div>
-                <span className="text-[8px] text-pink-600 font-bold">Scan Profile</span>
+                <span style={{
+                  fontSize: '8px',
+                  color: '#db2777',
+                  fontWeight: 'bold'
+                }}>
+                  Scan Profile
+                </span>
               </div>
             </div>
           </div>
         </div>
-      </Card>
+      </div>
     );
   }
 
   // Back side
   return (
-    <Card className="w-[320px] h-[200px] bg-gradient-to-br from-white via-pink-50/50 to-purple-50/40 border-2 border-pink-200/50 shadow-xl overflow-hidden">
-      {/* Gradient overlays */}
-      <div className="absolute inset-0 bg-gradient-to-br from-pink-100/20 via-transparent to-purple-100/20" />
-      <div className="absolute top-0 right-0 w-20 h-20 bg-gradient-to-bl from-pink-400/10 to-transparent rounded-bl-3xl" />
-      <div className="absolute bottom-0 left-0 w-20 h-20 bg-gradient-to-tr from-purple-400/10 to-transparent rounded-tr-3xl" />
-
-      {/* Content */}
-      <div className="relative flex flex-col h-full p-2.5 justify-between">
-        {/* Header */}
-        <div className="flex items-center justify-between">
-          <div className="flex items-center gap-1.5">
-            <div className="w-6 h-6 bg-gradient-to-br from-pink-100 to-purple-100 rounded-lg flex items-center justify-center border border-pink-300/50 shadow-md">
-              <img src="/cropped_circle_image (1).png" alt="Logo" className="w-5 h-5 object-contain" />
-            </div>
-            <div>
-              <p className="font-black text-[9px] leading-none tracking-wide bg-gradient-to-r from-pink-600 to-purple-600 bg-clip-text text-transparent">TOMO ACADEMY</p>
-              <p className="text-[6px] font-semibold text-slate-600 mt-0.5">EDUCATION ELEVATED</p>
-            </div>
+    <div style={{
+      width: '320px',
+      height: '200px',
+      background: 'linear-gradient(135deg, #ffffff 0%, #fce7f3 50%, #f3e8ff 100%)',
+      border: '2px solid rgba(251, 207, 232, 0.5)',
+      borderRadius: '8px',
+      overflow: 'hidden',
+      position: 'relative',
+      fontFamily: 'system-ui, -apple-system, sans-serif',
+      display: 'flex',
+      flexDirection: 'column',
+      padding: '10px',
+      justifyContent: 'space-between'
+    }}>
+      {/* Header */}
+      <div style={{
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'space-between'
+      }}>
+        <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
+          <div style={{
+            width: '24px',
+            height: '24px',
+            background: 'linear-gradient(135deg, #fce7f3, #f3e8ff)',
+            borderRadius: '8px',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            border: '1px solid rgba(251, 207, 232, 0.5)'
+          }}>
+            <img src="/cropped_circle_image (1).png" alt="Logo" style={{ width: '20px', height: '20px', objectFit: 'contain' }} />
           </div>
-          <div className="px-1.5 py-0.5 bg-gradient-to-r from-pink-500 to-purple-600 rounded-md shadow-md">
-            <p className="text-white text-[7px] font-bold leading-none">MEMBER</p>
-            <p className="text-white/90 text-[6px] text-center">2025</p>
+          <div>
+            <p style={{
+              fontSize: '9px',
+              fontWeight: '900',
+              margin: 0,
+              lineHeight: '1',
+              letterSpacing: '0.5px',
+              background: 'linear-gradient(90deg, #db2777, #a855f7)',
+              WebkitBackgroundClip: 'text',
+              WebkitTextFillColor: 'transparent',
+              backgroundClip: 'text'
+            }}>
+              TOMO ACADEMY
+            </p>
+            <p style={{
+              fontSize: '6px',
+              fontWeight: '600',
+              color: '#64748b',
+              margin: '2px 0 0 0'
+            }}>
+              EDUCATION ELEVATED
+            </p>
           </div>
         </div>
-
-        {/* QR Section */}
-        <div className="flex flex-col items-center justify-center flex-1">
-          <div className="relative">
-            <div className="absolute inset-0 flex items-center justify-center">
-              <div className="w-16 h-16 rounded-lg border border-pink-300/30 animate-ping" style={{ animationDuration: '3s' }} />
-            </div>
-            
-            <div className="relative p-1.5 bg-white rounded-lg shadow-xl border-2 border-pink-300/60">
-              <QRCode value={profileUrl} size={48} />
-            </div>
-          </div>
-          
-          <div className="mt-2 flex items-center gap-1 px-2.5 py-0.5 bg-gradient-to-r from-pink-500/10 to-purple-500/10 backdrop-blur-sm rounded-full border border-pink-300/60">
-            <Eye className="w-2.5 h-2.5 text-pink-600" />
-            <p className="font-bold text-[7px] bg-gradient-to-r from-pink-600 to-purple-600 bg-clip-text text-transparent">SCAN TO VIEW PROFILE</p>
-          </div>
-        </div>
-
-        {/* Contact Section */}
-        <div className="space-y-1">
-          <div className="grid grid-cols-2 gap-1">
-            <div className="flex items-center gap-1 px-1.5 py-0.5 bg-gradient-to-r from-pink-50 to-purple-50 rounded-md border border-pink-300/50">
-              <Globe className="w-2 h-2 text-pink-600 flex-shrink-0" />
-              <span className="text-[6px] font-bold text-pink-900 truncate">tomoacademy.com</span>
-            </div>
-            <div className="flex items-center gap-1 px-1.5 py-0.5 bg-gradient-to-r from-purple-50 to-pink-50 rounded-md border border-purple-300/50">
-              <Mail className="w-2 h-2 text-purple-600 flex-shrink-0" />
-              <span className="text-[6px] font-bold text-purple-900 truncate">support@tomo</span>
-            </div>
-          </div>
-
-          <div className="flex items-center justify-center gap-2 px-2 py-0.5 bg-gradient-to-r from-pink-50 to-purple-50 rounded-md border border-pink-300/50">
-            <span className="text-[6px] font-bold text-slate-700">FOLLOW:</span>
-            <div className="w-4 h-4 rounded bg-gradient-to-br from-red-500/10 to-red-600/10 flex items-center justify-center border border-red-300/50">
-              <svg className="w-2.5 h-2.5 text-red-600" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
-              </svg>
-            </div>
-            <div className="w-4 h-4 rounded bg-gradient-to-br from-pink-500/10 to-purple-600/10 flex items-center justify-center border border-pink-300/50">
-              <Instagram className="w-2.5 h-2.5 text-pink-600" />
-            </div>
-          </div>
-
-          <div className="text-center pt-0.5 border-t border-pink-200/50">
-            <p className="text-[6px] font-bold bg-gradient-to-r from-pink-600 to-purple-600 bg-clip-text text-transparent leading-tight">OFFICIAL MEMBER CARD</p>
-            <p className="text-[5px] text-slate-600 leading-tight">Valid 2025 • Unauthorized use prohibited</p>
-          </div>
+        <div style={{
+          padding: '2px 6px',
+          background: 'linear-gradient(90deg, #ec4899, #a855f7)',
+          borderRadius: '6px',
+          display: 'flex',
+          flexDirection: 'column',
+          alignItems: 'center'
+        }}>
+          <p style={{ fontSize: '7px', fontWeight: 'bold', color: 'white', margin: 0, lineHeight: '1' }}>MEMBER</p>
+          <p style={{ fontSize: '6px', color: 'rgba(255, 255, 255, 0.9)', margin: 0 }}>2025</p>
         </div>
       </div>
-    </Card>
+
+      {/* QR Section */}
+      <div style={{
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'center',
+        justifyContent: 'center',
+        flex: 1
+      }}>
+        <div style={{
+          padding: '6px',
+          background: 'white',
+          borderRadius: '8px',
+          border: '2px solid rgba(251, 207, 232, 0.6)'
+        }}>
+          <QRCode value={profileUrl} size={48} />
+        </div>
+        
+        <div style={{
+          marginTop: '8px',
+          display: 'flex',
+          alignItems: 'center',
+          gap: '4px',
+          padding: '2px 10px',
+          background: 'linear-gradient(90deg, rgba(236, 72, 153, 0.1), rgba(168, 85, 247, 0.1))',
+          borderRadius: '12px',
+          border: '1px solid rgba(251, 207, 232, 0.6)'
+        }}>
+          <span style={{ fontSize: '10px' }}>👁️</span>
+          <p style={{
+            fontSize: '7px',
+            fontWeight: 'bold',
+            margin: 0,
+            background: 'linear-gradient(90deg, #db2777, #a855f7)',
+            WebkitBackgroundClip: 'text',
+            WebkitTextFillColor: 'transparent',
+            backgroundClip: 'text'
+          }}>
+            SCAN TO VIEW PROFILE
+          </p>
+        </div>
+      </div>
+
+      {/* Contact Section */}
+      <div>
+        <div style={{
+          display: 'grid',
+          gridTemplateColumns: '1fr 1fr',
+          gap: '4px',
+          marginBottom: '4px'
+        }}>
+          <div style={{
+            display: 'flex',
+            alignItems: 'center',
+            gap: '4px',
+            padding: '2px 6px',
+            background: 'linear-gradient(90deg, #fce7f3, #f3e8ff)',
+            borderRadius: '6px',
+            border: '1px solid rgba(251, 207, 232, 0.5)'
+          }}>
+            <span style={{ fontSize: '8px' }}>🌐</span>
+            <span style={{
+              fontSize: '6px',
+              fontWeight: 'bold',
+              color: '#831843',
+              overflow: 'hidden',
+              textOverflow: 'ellipsis',
+              whiteSpace: 'nowrap'
+            }}>
+              tomoacademy.com
+            </span>
+          </div>
+          <div style={{
+            display: 'flex',
+            alignItems: 'center',
+            gap: '4px',
+            padding: '2px 6px',
+            background: 'linear-gradient(90deg, #f3e8ff, #fce7f3)',
+            borderRadius: '6px',
+            border: '1px solid rgba(233, 213, 255, 0.5)'
+          }}>
+            <span style={{ fontSize: '8px' }}>✉️</span>
+            <span style={{
+              fontSize: '6px',
+              fontWeight: 'bold',
+              color: '#581c87',
+              overflow: 'hidden',
+              textOverflow: 'ellipsis',
+              whiteSpace: 'nowrap'
+            }}>
+              support@tomo
+            </span>
+          </div>
+        </div>
+
+        <div style={{
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+          gap: '8px',
+          padding: '2px 8px',
+          background: 'linear-gradient(90deg, #fce7f3, #f3e8ff)',
+          borderRadius: '6px',
+          border: '1px solid rgba(251, 207, 232, 0.5)',
+          marginBottom: '4px'
+        }}>
+          <span style={{ fontSize: '6px', fontWeight: 'bold', color: '#475569' }}>FOLLOW:</span>
+          <div style={{
+            width: '16px',
+            height: '16px',
+            borderRadius: '4px',
+            background: 'linear-gradient(135deg, rgba(239, 68, 68, 0.1), rgba(220, 38, 38, 0.1))',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            border: '1px solid rgba(239, 68, 68, 0.5)'
+          }}>
+            <span style={{ fontSize: '10px' }}>▶️</span>
+          </div>
+          <div style={{
+            width: '16px',
+            height: '16px',
+            borderRadius: '4px',
+            background: 'linear-gradient(135deg, rgba(236, 72, 153, 0.1), rgba(168, 85, 247, 0.1))',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            border: '1px solid rgba(251, 207, 232, 0.5)'
+          }}>
+            <span style={{ fontSize: '10px' }}>📷</span>
+          </div>
+        </div>
+
+        <div style={{
+          textAlign: 'center',
+          paddingTop: '4px',
+          borderTop: '1px solid rgba(251, 207, 232, 0.5)'
+        }}>
+          <p style={{
+            fontSize: '6px',
+            fontWeight: 'bold',
+            margin: 0,
+            background: 'linear-gradient(90deg, #db2777, #a855f7)',
+            WebkitBackgroundClip: 'text',
+            WebkitTextFillColor: 'transparent',
+            backgroundClip: 'text',
+            lineHeight: '1.2'
+          }}>
+            OFFICIAL MEMBER CARD
+          </p>
+          <p style={{
+            fontSize: '5px',
+            color: '#64748b',
+            margin: 0,
+            lineHeight: '1.2'
+          }}>
+            Valid 2025 • Unauthorized use prohibited
+          </p>
+        </div>
+      </div>
+    </div>
   );
 }
