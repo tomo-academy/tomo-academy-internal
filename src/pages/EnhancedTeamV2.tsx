@@ -15,6 +15,7 @@ import { AdminOnly } from "@/components/ui/admin-only";
 import { SEO } from "@/components/SEO";
 import Navbar from "@/components/Navbar";
 import { ExportIdCardsButton } from "@/components/ExportIdCardsButton";
+import { ExportAllCardsDialog } from "@/components/ExportAllCardsDialog";
 import { employees, departments } from "@/data/employees";
 import { db } from "@/lib/db";
 import { githubPhotoService } from "@/services/githubPhotoService";
@@ -261,6 +262,7 @@ const EnhancedTeamV2 = () => {
                     <RefreshCw className={cn("w-4 h-4", isRefreshing && "animate-spin")} />
                     Refresh
                   </Button>
+                  <ExportAllCardsDialog employees={filteredMembers} />
                   <ExportIdCardsButton employees={filteredMembers} />
                   <Button 
                     className="bg-primary hover:bg-primary-hover shadow-glow gap-2"

@@ -15,7 +15,7 @@ export interface Employee {
 }
 
 // Helper to render a React component and capture it
-const renderAndCapture = async (
+export const renderAndCapture = async (
   employee: Employee,
   side: 'front' | 'back'
 ): Promise<HTMLCanvasElement> => {
