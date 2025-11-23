@@ -16,12 +16,35 @@ export const exportSingleCardAsPNG = async (
   side: 'front' | 'back'
 ): Promise<void> => {
   try {
-    const canvas = await html2canvas(cardElement, {
+    // Clone the element to avoid modifying the original
+    const clone = cardElement.cloneNode(true) as HTMLElement;
+    
+    // Remove any transforms and fix positioning for export
+    clone.style.transform = 'none';
+    clone.style.position = 'relative';
+    clone.style.backfaceVisibility = 'visible';
+    
+    // Create a temporary container
+    const container = document.createElement('div');
+    container.style.position = 'absolute';
+    container.style.left = '-9999px';
+    container.style.top = '0';
+    container.style.width = '320px';
+    container.style.height = '200px';
+    document.body.appendChild(container);
+    container.appendChild(clone);
+
+    const canvas = await html2canvas(clone, {
       scale: 3,
       backgroundColor: '#ffffff',
       logging: false,
       useCORS: true,
+      width: 320,
+      height: 200,
     });
+
+    // Clean up
+    document.body.removeChild(container);
 
     const link = document.createElement('a');
     link.download = `${fileName}_${side}.png`;
@@ -39,20 +62,56 @@ export const exportSingleCardAsPDF = async (
   fileName: string
 ): Promise<void> => {
   try {
+    // Clone elements to avoid modifying originals
+    const frontClone = frontElement.cloneNode(true) as HTMLElement;
+    const backClone = backElement.cloneNode(true) as HTMLElement;
+    
+    // Remove transforms for both
+    [frontClone, backClone].forEach(clone => {
+      clone.style.transform = 'none';
+      clone.style.position = 'relative';
+      clone.style.backfaceVisibility = 'visible';
+    });
+    
+    // Create temporary containers
+    const frontContainer = document.createElement('div');
+    frontContainer.style.position = 'absolute';
+    frontContainer.style.left = '-9999px';
+    frontContainer.style.width = '320px';
+    frontContainer.style.height = '200px';
+    document.body.appendChild(frontContainer);
+    frontContainer.appendChild(frontClone);
+
+    const backContainer = document.createElement('div');
+    backContainer.style.position = 'absolute';
+    backContainer.style.left = '-9999px';
+    backContainer.style.width = '320px';
+    backContainer.style.height = '200px';
+    document.body.appendChild(backContainer);
+    backContainer.appendChild(backClone);
+
     // Capture both sides
-    const frontCanvas = await html2canvas(frontElement, {
+    const frontCanvas = await html2canvas(frontClone, {
       scale: 3,
       backgroundColor: '#ffffff',
       logging: false,
       useCORS: true,
+      width: 320,
+      height: 200,
     });
 
-    const backCanvas = await html2canvas(backElement, {
+    const backCanvas = await html2canvas(backClone, {
       scale: 3,
       backgroundColor: '#ffffff',
       logging: false,
       useCORS: true,
+      width: 320,
+      height: 200,
     });
+
+    // Clean up
+    document.body.removeChild(frontContainer);
+    document.body.removeChild(backContainer);
 
     // Create PDF (credit card size: 85.6mm x 53.98mm)
     const pdf = new jsPDF({
@@ -122,20 +181,56 @@ export const exportAllCardsAsPDF = async (employees: Employee[]): Promise<void> 
       const backCard = document.querySelector(`[data-card-id="${employee.id}"][data-side="back"]`) as HTMLElement;
 
       if (frontCard && backCard) {
+        // Clone elements
+        const frontClone = frontCard.cloneNode(true) as HTMLElement;
+        const backClone = backCard.cloneNode(true) as HTMLElement;
+        
+        // Remove transforms
+        [frontClone, backClone].forEach(clone => {
+          clone.style.transform = 'none';
+          clone.style.position = 'relative';
+          clone.style.backfaceVisibility = 'visible';
+        });
+        
+        // Create temporary containers
+        const frontContainer = document.createElement('div');
+        frontContainer.style.position = 'absolute';
+        frontContainer.style.left = '-9999px';
+        frontContainer.style.width = '320px';
+        frontContainer.style.height = '200px';
+        document.body.appendChild(frontContainer);
+        frontContainer.appendChild(frontClone);
+
+        const backContainer = document.createElement('div');
+        backContainer.style.position = 'absolute';
+        backContainer.style.left = '-9999px';
+        backContainer.style.width = '320px';
+        backContainer.style.height = '200px';
+        document.body.appendChild(backContainer);
+        backContainer.appendChild(backClone);
+
         // Capture both sides
-        const frontCanvas = await html2canvas(frontCard, {
+        const frontCanvas = await html2canvas(frontClone, {
           scale: 3,
           backgroundColor: '#ffffff',
           logging: false,
           useCORS: true,
+          width: 320,
+          height: 200,
         });
 
-        const backCanvas = await html2canvas(backCard, {
+        const backCanvas = await html2canvas(backClone, {
           scale: 3,
           backgroundColor: '#ffffff',
           logging: false,
           useCORS: true,
+          width: 320,
+          height: 200,
         });
+
+        // Clean up
+        document.body.removeChild(frontContainer);
+        document.body.removeChild(backContainer);
 
         // Add front side
         if (!firstPage) {
