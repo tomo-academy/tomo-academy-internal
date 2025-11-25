@@ -57,6 +57,7 @@ export function CompactIDCard({ employee, onPhotoUpdate }: CompactIDCardProps) {
   const { toast: toastHook } = useToast();
 
   const profileUrl = generateProfileUrl(employee.id);
+  const youtubeUrl = 'https://www.youtube.com/@TOMOACADEMY';
 
   const handleExportCard = async (e: React.MouseEvent) => {
     e.stopPropagation();
@@ -395,14 +396,14 @@ END:VCARD`;
                 
                 {/* QR Code with premium frame */}
                 <div className="relative p-1.5 bg-white dark:bg-slate-800 rounded-lg shadow-xl border-2 border-pink-300/60 dark:border-pink-700/60">
-                  <QRCode value={profileUrl} size={48} />
+                  <QRCode value={youtubeUrl} size={48} />
                 </div>
               </div>
               
               {/* Scan instruction */}
               <div className="mt-2 flex items-center gap-1 px-2.5 py-0.5 bg-gradient-to-r from-pink-500/10 to-purple-500/10 backdrop-blur-sm rounded-full border border-pink-300/60 dark:border-pink-700/60">
                 <Eye className="w-2.5 h-2.5 text-pink-600 dark:text-pink-400" />
-                <p className="font-bold text-[7px] bg-gradient-to-r from-pink-600 to-purple-600 bg-clip-text text-transparent">SCAN TO VIEW PROFILE</p>
+                <p className="font-bold text-[7px] bg-gradient-to-r from-pink-600 to-purple-600 bg-clip-text text-transparent">SCAN FOR YOUTUBE</p>
               </div>
             </div>
 
@@ -412,7 +413,7 @@ END:VCARD`;
               <div className="grid grid-cols-2 gap-1">
                 <div className="flex items-center gap-1 px-1.5 py-0.5 bg-gradient-to-r from-pink-50 to-purple-50 dark:from-pink-950/30 dark:to-purple-950/30 rounded-md border border-pink-300/50 dark:border-pink-700/50">
                   <Globe className="w-2 h-2 text-pink-600 dark:text-pink-400 flex-shrink-0" />
-                  <span className="text-[6px] font-bold text-pink-900 dark:text-pink-200 truncate">tomoacademy.com</span>
+                  <span className="text-[6px] font-bold text-pink-900 dark:text-pink-200 truncate">tomoacademy.site</span>
                 </div>
                 <div className="flex items-center gap-1 px-1.5 py-0.5 bg-gradient-to-r from-purple-50 to-pink-50 dark:from-purple-950/30 dark:to-pink-950/30 rounded-md border border-purple-300/50 dark:border-purple-700/50">
                   <Mail className="w-2 h-2 text-purple-600 dark:text-purple-400 flex-shrink-0" />
