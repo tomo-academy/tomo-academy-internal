@@ -14,6 +14,7 @@ interface ExportableIDCardProps {
 
 export function ExportableIDCard({ employee, side }: ExportableIDCardProps) {
   const profileUrl = `https://tomoacademy.site/employee/${employee.id}`;
+  const youtubeUrl = 'https://www.youtube.com/@TOMOACADEMY';
 
   const renderAvatar = () => {
     if (employee.photo) {
@@ -325,7 +326,7 @@ export function ExportableIDCard({ employee, side }: ExportableIDCardProps) {
           borderRadius: '8px',
           border: '2px solid rgba(251, 207, 232, 0.6)'
         }}>
-          <QRCode value={profileUrl} size={48} />
+          <QRCode value={youtubeUrl} size={48} />
         </div>
         
         <div style={{
@@ -348,7 +349,7 @@ export function ExportableIDCard({ employee, side }: ExportableIDCardProps) {
             WebkitTextFillColor: 'transparent',
             backgroundClip: 'text'
           }}>
-            SCAN TO VIEW PROFILE
+            SCAN FOR YOUTUBE
           </p>
         </div>
       </div>
@@ -379,7 +380,7 @@ export function ExportableIDCard({ employee, side }: ExportableIDCardProps) {
               textOverflow: 'ellipsis',
               whiteSpace: 'nowrap'
             }}>
-              tomoacademy.com
+              tomoacademy.site
             </span>
           </div>
           <div style={{
