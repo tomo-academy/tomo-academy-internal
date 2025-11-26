@@ -43,6 +43,7 @@ import {
 import { employees, Employee } from "@/data/employees";
 import { githubPhotoService } from "@/services/githubPhotoService";
 import { CompactIDCard } from "@/components/ui/compact-id-card";
+import { LocationMap } from "@/components/ui/location-map";
 
 const EmployeeProfile = () => {
   const { employeeId } = useParams<{ employeeId: string }>();
@@ -523,6 +524,15 @@ END:VCARD`;
                   </div>
                 </CardContent>
               </Card>
+
+              {/* Location Map */}
+              {employee.location && (
+                <LocationMap 
+                  location={employee.location} 
+                  employeeName={employee.name}
+                  className="border-0 shadow-xl bg-white/80 dark:bg-gray-900/80 backdrop-blur-xl"
+                />
+              )}
 
               {/* Contact Information */}
               <Card className="border-0 shadow-xl bg-white/80 dark:bg-gray-900/80 backdrop-blur-xl">
