@@ -172,25 +172,12 @@ END:VCARD`;
         canonical={`/profile/${employee.id}`}
       />
       
-      <div className="min-h-screen bg-gradient-to-br from-slate-950 via-purple-950 to-indigo-950 dark:from-black dark:via-purple-950 dark:to-indigo-950 relative overflow-hidden">
-        {/* Advanced Animated Background with Multiple Layers */}
+      <div className="min-h-screen bg-gradient-to-br from-slate-50 via-purple-50 to-pink-50 dark:from-gray-950 dark:via-purple-950 dark:to-slate-950 relative overflow-hidden">
+        {/* Animated Background Elements */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
-          {/* Gradient Mesh Background */}
-          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-purple-900/20 via-transparent to-transparent"></div>
-          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_left,_var(--tw-gradient-stops))] from-pink-900/20 via-transparent to-transparent"></div>
-          
-          {/* Animated Blobs */}
-          <div className="absolute top-20 left-10 w-96 h-96 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full mix-blend-screen filter blur-3xl opacity-20 animate-blob"></div>
-          <div className="absolute top-40 right-10 w-96 h-96 bg-gradient-to-r from-pink-500 to-blue-500 rounded-full mix-blend-screen filter blur-3xl opacity-20 animate-blob animation-delay-2000"></div>
-          <div className="absolute -bottom-32 left-1/2 w-96 h-96 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full mix-blend-screen filter blur-3xl opacity-20 animate-blob animation-delay-4000"></div>
-          
-          {/* Grid Pattern Overlay */}
-          <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,.02)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,.02)_1px,transparent_1px)] bg-[size:100px_100px] [mask-image:radial-gradient(ellipse_at_center,black,transparent_80%)]"></div>
-          
-          {/* Floating Particles */}
-          <div className="absolute top-1/4 left-1/4 w-2 h-2 bg-purple-400 rounded-full animate-ping opacity-50"></div>
-          <div className="absolute top-1/3 right-1/4 w-2 h-2 bg-pink-400 rounded-full animate-ping opacity-50 animation-delay-2000"></div>
-          <div className="absolute bottom-1/3 left-1/3 w-2 h-2 bg-blue-400 rounded-full animate-ping opacity-50 animation-delay-4000"></div>
+          <div className="absolute top-20 left-10 w-72 h-72 bg-purple-300 dark:bg-purple-700 rounded-full mix-blend-multiply dark:mix-blend-soft-light filter blur-3xl opacity-20 animate-blob"></div>
+          <div className="absolute top-40 right-10 w-72 h-72 bg-pink-300 dark:bg-pink-700 rounded-full mix-blend-multiply dark:mix-blend-soft-light filter blur-3xl opacity-20 animate-blob animation-delay-2000"></div>
+          <div className="absolute -bottom-32 left-1/2 w-72 h-72 bg-blue-300 dark:bg-blue-700 rounded-full mix-blend-multiply dark:mix-blend-soft-light filter blur-3xl opacity-20 animate-blob animation-delay-4000"></div>
         </div>
         <div className="container mx-auto px-4 py-6 max-w-7xl relative z-10">
           {/* Premium Header Navigation */}
@@ -228,207 +215,132 @@ END:VCARD`;
                 </CardContent>
               </Card>
 
-              {/* Ultra Premium Profile Card with Glass Morphism */}
-              <Card className="overflow-hidden border-0 shadow-[0_0_50px_rgba(168,85,247,0.3)] bg-gradient-to-br from-white/10 via-purple-500/5 to-pink-500/5 dark:from-white/5 dark:via-purple-500/10 dark:to-pink-500/10 backdrop-blur-2xl relative group">
-                {/* Shimmer Effect Overlay */}
-                <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent animate-shimmer opacity-0 group-hover:opacity-100 transition-opacity duration-700" style={{ animationDuration: '3s' }}></div>
-                
-                {/* Advanced Animated Header Background */}
-                <div className="relative h-40 bg-gradient-to-r from-purple-600 via-pink-600 to-blue-600 overflow-hidden">
-                  <div className="absolute inset-0 bg-gradient-to-r from-purple-600/90 via-pink-600/90 to-blue-600/90 animate-gradient-x"></div>
-                  
-                  {/* Mesh Gradient Overlay */}
-                  <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(255,255,255,0.1),transparent_50%)]"></div>
-                  
-                  {/* Animated Light Beams */}
-                  <div className="absolute inset-0 opacity-40">
+              {/* Premium Profile Card */}
+              <Card className="overflow-hidden border-0 shadow-2xl bg-gradient-to-br from-white via-purple-50/30 to-pink-50/30 dark:from-gray-900 dark:via-purple-950/30 dark:to-pink-950/30 backdrop-blur-xl">
+                {/* Animated Header Background */}
+                <div className="relative h-32 bg-gradient-to-r from-purple-600 via-pink-600 to-blue-600 overflow-hidden">
+                  <div className="absolute inset-0 bg-gradient-to-r from-purple-600/80 via-pink-600/80 to-blue-600/80 animate-gradient-x"></div>
+                  <div className="absolute inset-0 opacity-30">
                     <div className="absolute top-0 left-0 w-40 h-40 bg-white rounded-full filter blur-3xl animate-pulse"></div>
                     <div className="absolute bottom-0 right-0 w-40 h-40 bg-white rounded-full filter blur-3xl animate-pulse animation-delay-2000"></div>
-                    <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-60 h-60 bg-gradient-to-r from-white/20 to-transparent rounded-full filter blur-2xl animate-spin" style={{ animationDuration: '10s' }}></div>
-                  </div>
-                  
-                  {/* Sparkle Effects */}
-                  <div className="absolute top-4 right-4">
-                    <Sparkles className="w-6 h-6 text-white/80 animate-pulse" />
-                  </div>
-                  <div className="absolute bottom-4 left-4">
-                    <Sparkles className="w-4 h-4 text-white/60 animate-pulse animation-delay-2000" />
                   </div>
                 </div>
                 
                 <CardContent className="relative pt-16 pb-6 px-6">
-                  {/* Ultra Premium Profile Picture with Advanced Effects */}
-                  <div className="absolute -top-20 left-1/2 transform -translate-x-1/2">
+                  {/* Profile Picture with Premium Effects */}
+                  <div className="absolute -top-16 left-1/2 transform -translate-x-1/2">
                     <div className="relative group">
-                      {/* Multiple Animated Glow Rings */}
-                      <div className="absolute inset-0 bg-gradient-to-r from-purple-600 via-pink-600 to-blue-600 rounded-full blur-2xl opacity-60 group-hover:opacity-100 transition-all duration-500 animate-pulse scale-110"></div>
-                      <div className="absolute inset-0 bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 rounded-full blur-xl opacity-40 group-hover:opacity-80 transition-all duration-500 animate-pulse animation-delay-2000 scale-105"></div>
-                      
-                      {/* Rotating Border */}
-                      <div className="absolute inset-0 rounded-full bg-gradient-to-r from-purple-600 via-pink-600 to-blue-600 animate-spin opacity-75 scale-110 group-hover:scale-115 transition-transform duration-500" style={{ animationDuration: '3s' }}></div>
-                      
+                      <div className="absolute inset-0 bg-gradient-to-r from-purple-600 via-pink-600 to-blue-600 rounded-full blur-lg opacity-75 group-hover:opacity-100 transition-opacity animate-pulse"></div>
                       <div className="relative">
-                        {/* Hexagonal Frame Effect */}
-                        <div className="absolute inset-0 rounded-full border-4 border-white/20 dark:border-white/10 scale-110"></div>
-                        
                         <img
                           {...avatarProps}
-                          className="w-36 h-36 rounded-full object-cover border-4 border-white dark:border-slate-900 shadow-2xl bg-white relative z-10 group-hover:scale-105 transition-transform duration-500"
+                          className="w-32 h-32 rounded-full object-cover border-4 border-white dark:border-gray-900 shadow-2xl bg-white relative z-10"
                         />
-                        
-                        {/* Holographic Shine Effect */}
-                        <div className="absolute inset-0 rounded-full bg-gradient-to-tr from-transparent via-white/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 animate-shimmer z-20 pointer-events-none" style={{ animationDuration: '2s' }}></div>
-                        
-                        {/* Status Indicator with Pulse */}
-                        <div className={`absolute bottom-3 right-3 w-10 h-10 rounded-full border-4 border-white dark:border-slate-900 flex items-center justify-center z-20 shadow-lg ${
-                          employee.availability === 'available' ? 'bg-gradient-to-r from-green-400 to-emerald-500' :
-                          employee.availability === 'busy' ? 'bg-gradient-to-r from-yellow-400 to-orange-500' : 'bg-gradient-to-r from-gray-400 to-gray-500'
+                        {/* Status Indicator */}
+                        <div className={`absolute bottom-2 right-2 w-8 h-8 rounded-full border-4 border-white dark:border-gray-900 flex items-center justify-center z-20 ${
+                          employee.availability === 'available' ? 'bg-green-500' :
+                          employee.availability === 'busy' ? 'bg-yellow-500' : 'bg-gray-500'
                         }`}>
-                          <div className="w-4 h-4 bg-white rounded-full animate-pulse"></div>
-                          <div className={`absolute inset-0 rounded-full animate-ping ${
-                            employee.availability === 'available' ? 'bg-green-400' :
-                            employee.availability === 'busy' ? 'bg-yellow-400' : 'bg-gray-400'
-                          }`}></div>
-                        </div>
-                        
-                        {/* Floating Badge */}
-                        <div className="absolute -top-2 left-1/2 -translate-x-1/2 z-20">
-                          <div className="px-3 py-1 bg-gradient-to-r from-purple-600 via-pink-600 to-blue-600 rounded-full text-white text-xs font-bold shadow-lg animate-bounce">
-                            ⭐ Premium
-                          </div>
+                          <div className="w-3 h-3 bg-white rounded-full animate-pulse"></div>
                         </div>
                       </div>
                     </div>
                   </div>
                   
-                  {/* Name & Title with Advanced Typography */}
+                  {/* Name & Title */}
                   <div className="text-center mb-4">
-                    <div className="relative inline-block">
-                      <h1 className="text-3xl font-black bg-gradient-to-r from-purple-400 via-pink-400 to-blue-400 bg-clip-text text-transparent mb-1 tracking-tight relative z-10 drop-shadow-[0_0_10px_rgba(168,85,247,0.5)]">
-                        {employee.name}
-                      </h1>
-                      {/* Text Glow Effect */}
-                      <div className="absolute inset-0 bg-gradient-to-r from-purple-600 via-pink-600 to-blue-600 blur-xl opacity-30 -z-10"></div>
-                    </div>
-                    
-                    <p className="text-base font-bold text-white/90 mb-2 mt-1">{employee.role}</p>
-                    
+                    <h1 className="text-2xl font-bold bg-gradient-to-r from-purple-600 via-pink-600 to-blue-600 bg-clip-text text-transparent mb-1">
+                      {employee.name}
+                    </h1>
+                    <p className="text-sm font-medium text-gray-600 dark:text-gray-300 mb-1">{employee.role}</p>
                     <Badge 
                       variant="secondary" 
-                      className="bg-gradient-to-r from-purple-500/20 to-pink-500/20 backdrop-blur-sm text-white border border-white/20 shadow-lg hover:shadow-purple-500/50 transition-all duration-300"
+                      className="bg-gradient-to-r from-purple-100 to-pink-100 dark:from-purple-900/30 dark:to-pink-900/30 text-purple-700 dark:text-purple-300 border-0"
                     >
                       <Building2 className="w-3 h-3 mr-1" />
                       {employee.department}
                     </Badge>
                   </div>
 
-                  {/* Bio with Glass Effect */}
-                  <div className="relative mb-6 px-2">
-                    <p className="text-sm text-center text-white/80 leading-relaxed relative z-10">
-                      {employee.bio}
-                    </p>
-                  </div>
+                  {/* Bio */}
+                  <p className="text-sm text-center text-gray-600 dark:text-gray-300 leading-relaxed mb-6 px-2">
+                    {employee.bio}
+                  </p>
 
-                  <Separator className="my-4 bg-white/10" />
+                  <Separator className="my-4" />
 
-                  {/* Advanced Quick Stats Grid with 3D Effect */}
+                  {/* Quick Stats Grid */}
                   <div className="grid grid-cols-2 gap-3 mb-4">
-                    <div className="group text-center p-4 bg-gradient-to-br from-purple-500/20 via-purple-500/10 to-transparent backdrop-blur-sm rounded-2xl border border-purple-400/30 hover:border-purple-400/60 transition-all duration-300 hover:scale-105 hover:shadow-[0_0_30px_rgba(168,85,247,0.3)] relative overflow-hidden">
-                      <div className="absolute inset-0 bg-gradient-to-br from-purple-500/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                      <Video className="w-6 h-6 mx-auto mb-2 text-purple-300 group-hover:scale-110 transition-transform duration-300 drop-shadow-[0_0_10px_rgba(168,85,247,0.8)]" />
-                      <p className="text-3xl font-black text-white drop-shadow-lg">{employee.stats.videos}</p>
-                      <p className="text-xs text-white/60 mt-1">Videos</p>
+                    <div className="text-center p-3 bg-gradient-to-br from-purple-50 to-purple-100 dark:from-purple-900/20 dark:to-purple-800/20 rounded-xl border border-purple-200/50 dark:border-purple-700/50">
+                      <Video className="w-5 h-5 mx-auto mb-1 text-purple-600 dark:text-purple-400" />
+                      <p className="text-2xl font-bold text-purple-700 dark:text-purple-300">{employee.stats.videos}</p>
+                      <p className="text-xs text-gray-600 dark:text-gray-400">Videos</p>
                     </div>
-                    <div className="group text-center p-4 bg-gradient-to-br from-pink-500/20 via-pink-500/10 to-transparent backdrop-blur-sm rounded-2xl border border-pink-400/30 hover:border-pink-400/60 transition-all duration-300 hover:scale-105 hover:shadow-[0_0_30px_rgba(236,72,153,0.3)] relative overflow-hidden">
-                      <div className="absolute inset-0 bg-gradient-to-br from-pink-500/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                      <Target className="w-6 h-6 mx-auto mb-2 text-pink-300 group-hover:scale-110 transition-transform duration-300 drop-shadow-[0_0_10px_rgba(236,72,153,0.8)]" />
-                      <p className="text-3xl font-black text-white drop-shadow-lg">{employee.stats.tasks}</p>
-                      <p className="text-xs text-white/60 mt-1">Tasks</p>
+                    <div className="text-center p-3 bg-gradient-to-br from-pink-50 to-pink-100 dark:from-pink-900/20 dark:to-pink-800/20 rounded-xl border border-pink-200/50 dark:border-pink-700/50">
+                      <Target className="w-5 h-5 mx-auto mb-1 text-pink-600 dark:text-pink-400" />
+                      <p className="text-2xl font-bold text-pink-700 dark:text-pink-300">{employee.stats.tasks}</p>
+                      <p className="text-xs text-gray-600 dark:text-gray-400">Tasks</p>
                     </div>
-                    <div className="group text-center p-4 bg-gradient-to-br from-yellow-500/20 via-yellow-500/10 to-transparent backdrop-blur-sm rounded-2xl border border-yellow-400/30 hover:border-yellow-400/60 transition-all duration-300 hover:scale-105 hover:shadow-[0_0_30px_rgba(234,179,8,0.3)] relative overflow-hidden">
-                      <div className="absolute inset-0 bg-gradient-to-br from-yellow-500/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                      <Star className="w-6 h-6 mx-auto mb-2 text-yellow-300 group-hover:scale-110 transition-transform duration-300 drop-shadow-[0_0_10px_rgba(234,179,8,0.8)]" />
-                      <p className="text-3xl font-black text-white drop-shadow-lg">{employee.stats.rating}</p>
-                      <p className="text-xs text-white/60 mt-1">Rating</p>
+                    <div className="text-center p-3 bg-gradient-to-br from-blue-50 to-blue-100 dark:from-blue-900/20 dark:to-blue-800/20 rounded-xl border border-blue-200/50 dark:border-blue-700/50">
+                      <Star className="w-5 h-5 mx-auto mb-1 text-yellow-600 dark:text-yellow-400" />
+                      <p className="text-2xl font-bold text-blue-700 dark:text-blue-300">{employee.stats.rating}</p>
+                      <p className="text-xs text-gray-600 dark:text-gray-400">Rating</p>
                     </div>
-                    <div className="group text-center p-4 bg-gradient-to-br from-green-500/20 via-green-500/10 to-transparent backdrop-blur-sm rounded-2xl border border-green-400/30 hover:border-green-400/60 transition-all duration-300 hover:scale-105 hover:shadow-[0_0_30px_rgba(34,197,94,0.3)] relative overflow-hidden">
-                      <div className="absolute inset-0 bg-gradient-to-br from-green-500/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                      <Briefcase className="w-6 h-6 mx-auto mb-2 text-green-300 group-hover:scale-110 transition-transform duration-300 drop-shadow-[0_0_10px_rgba(34,197,94,0.8)]" />
-                      <p className="text-3xl font-black text-white drop-shadow-lg">{employee.stats.projects}</p>
-                      <p className="text-xs text-white/60 mt-1">Projects</p>
+                    <div className="text-center p-3 bg-gradient-to-br from-green-50 to-green-100 dark:from-green-900/20 dark:to-green-800/20 rounded-xl border border-green-200/50 dark:border-green-700/50">
+                      <Briefcase className="w-5 h-5 mx-auto mb-1 text-green-600 dark:text-green-400" />
+                      <p className="text-2xl font-bold text-green-700 dark:text-green-300">{employee.stats.projects}</p>
+                      <p className="text-xs text-gray-600 dark:text-gray-400">Projects</p>
                     </div>
                   </div>
 
-                  {/* Premium Employee ID Badge */}
-                  <div className="relative group">
-                    <div className="absolute inset-0 bg-gradient-to-r from-purple-600 via-pink-600 to-blue-600 rounded-xl blur-md opacity-50 group-hover:opacity-75 transition-opacity"></div>
-                    <div className="relative flex items-center justify-center gap-2 px-4 py-3 bg-gradient-to-r from-white/10 to-white/5 backdrop-blur-xl rounded-xl border border-white/20 hover:border-white/40 transition-all duration-300">
-                      <Award className="w-5 h-5 text-yellow-300 animate-pulse" />
-                      <span className="text-sm font-mono font-black text-white drop-shadow-lg tracking-wider">{employee.employeeId}</span>
-                      <Sparkles className="w-4 h-4 text-purple-300" />
-                    </div>
+                  {/* Employee ID Badge */}
+                  <div className="flex items-center justify-center gap-2 px-4 py-2 bg-gradient-to-r from-gray-100 to-gray-200 dark:from-gray-800 dark:to-gray-700 rounded-lg">
+                    <Award className="w-4 h-4 text-gray-600 dark:text-gray-300" />
+                    <span className="text-sm font-mono font-bold text-gray-700 dark:text-gray-200">{employee.employeeId}</span>
                   </div>
                 </CardContent>
               </Card>
 
-              {/* Ultra Premium QR Code Card with Holographic Effect */}
-              <Card className="border-0 shadow-[0_0_50px_rgba(168,85,247,0.3)] bg-gradient-to-br from-white/10 via-purple-500/5 to-pink-500/5 backdrop-blur-2xl relative overflow-hidden group">
-                {/* Animated Background Pattern */}
-                <div className="absolute inset-0 opacity-10">
-                  <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(168,85,247,0.3),transparent_50%)] animate-pulse"></div>
-                </div>
-                
-                <CardHeader className="text-center pb-3 relative z-10">
+              {/* QR Code Card */}
+              <Card className="border-0 shadow-xl bg-white/80 dark:bg-gray-900/80 backdrop-blur-xl">
+                <CardHeader className="text-center pb-3">
                   <div className="flex items-center justify-center gap-2 mb-2">
-                    <div className="p-2 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg animate-pulse">
-                      <Sparkles className="w-5 h-5 text-white" />
-                    </div>
-                    <h3 className="text-lg font-bold bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent drop-shadow-[0_0_10px_rgba(168,85,247,0.5)]">
+                    <Sparkles className="w-5 h-5 text-purple-600" />
+                    <h3 className="text-lg font-bold bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">
                       Share Profile
                     </h3>
                   </div>
                 </CardHeader>
-                <CardContent className="text-center relative z-10">
+                <CardContent className="text-center">
                   <div className="flex justify-center mb-4">
-                    <div className="relative group/qr">
-                      {/* Multi-layer Glow Effect */}
-                      <div className="absolute inset-0 bg-gradient-to-r from-purple-600 via-pink-600 to-blue-600 rounded-3xl blur-2xl opacity-40 group-hover/qr:opacity-70 transition-opacity duration-500 animate-pulse scale-110"></div>
-                      <div className="absolute inset-0 bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 rounded-3xl blur-xl opacity-30 group-hover/qr:opacity-60 transition-opacity duration-500 animate-pulse animation-delay-2000 scale-105"></div>
-                      
-                      {/* Rotating Border */}
-                      <div className="absolute inset-0 rounded-3xl bg-gradient-to-r from-purple-600 via-pink-600 to-blue-600 p-[2px] animate-spin opacity-50 scale-105" style={{ animationDuration: '3s' }}>
-                        <div className="w-full h-full rounded-3xl bg-transparent"></div>
-                      </div>
-                      
-                      <div className="relative bg-white p-5 rounded-3xl shadow-2xl border-2 border-white/30 backdrop-blur-sm group-hover/qr:scale-105 transition-transform duration-500">
+                    <div className="relative group">
+                      <div className="absolute inset-0 bg-gradient-to-r from-purple-600 to-pink-600 rounded-2xl blur-xl opacity-50 group-hover:opacity-75 transition-opacity"></div>
+                      <div className="relative bg-white p-4 rounded-2xl shadow-inner border-2 border-purple-100 dark:border-purple-800">
                         <SimpleQRCode 
                           value={typeof window !== 'undefined' ? window.location.href : ''}
-                          size={110}
-                          className="rounded-xl"
+                          size={100}
+                          className="rounded-lg"
                         />
-                        
-                        {/* Holographic Overlay */}
-                        <div className="absolute inset-0 rounded-3xl bg-gradient-to-tr from-transparent via-white/40 to-transparent opacity-0 group-hover/qr:opacity-100 transition-opacity duration-500 animate-shimmer pointer-events-none" style={{ animationDuration: '2s' }}></div>
                       </div>
                     </div>
                   </div>
-                  <p className="text-xs text-white/60 mb-4 font-medium">
-                    ✨ Scan to share this premium profile
+                  <p className="text-xs text-gray-600 dark:text-gray-400 mb-4">
+                    Scan to share profile
                   </p>
                   <div className="space-y-2">
                     <Button 
                       onClick={downloadVCard} 
-                      className="w-full bg-gradient-to-r from-purple-600 via-pink-600 to-blue-600 hover:from-purple-700 hover:via-pink-700 hover:to-blue-700 shadow-[0_0_20px_rgba(168,85,247,0.5)] hover:shadow-[0_0_30px_rgba(168,85,247,0.7)] transition-all duration-300 font-bold group/btn"
+                      className="w-full bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 shadow-lg hover:shadow-xl transition-all"
                     >
-                      <Download className="w-4 h-4 mr-2 group-hover/btn:animate-bounce" />
+                      <Download className="w-4 h-4 mr-2" />
                       Download vCard
                     </Button>
                     <Button 
                       variant="outline" 
                       onClick={shareProfile} 
-                      className="w-full border-white/30 bg-white/5 hover:bg-white/10 text-white hover:border-white/50 backdrop-blur-sm transition-all duration-300 group/btn"
+                      className="w-full border-purple-200 dark:border-purple-800 hover:bg-purple-50 dark:hover:bg-purple-900/20"
                     >
-                      <Share2 className="w-4 h-4 mr-2 group-hover/btn:rotate-12 transition-transform" />
+                      <Share2 className="w-4 h-4 mr-2" />
                       Share Profile
                     </Button>
                   </div>
@@ -510,51 +422,41 @@ END:VCARD`;
             {/* RIGHT COLUMN - Details & Content */}
             <div className="lg:col-span-2 space-y-6">
 
-              {/* Ultra Premium Performance Overview with Neon Effects */}
-              <Card className="border-0 shadow-[0_0_60px_rgba(168,85,247,0.4)] bg-gradient-to-br from-purple-600 via-pink-600 to-blue-600 text-white overflow-hidden relative group">
-                {/* Animated Mesh Gradient Background */}
-                <div className="absolute inset-0 bg-gradient-to-br from-purple-900/40 via-pink-900/40 to-blue-900/40"></div>
-                <div className="absolute top-0 right-0 w-96 h-96 bg-white/10 rounded-full filter blur-3xl animate-pulse"></div>
-                <div className="absolute bottom-0 left-0 w-96 h-96 bg-purple-500/20 rounded-full filter blur-3xl animate-pulse animation-delay-2000"></div>
-                
-                {/* Grid Pattern */}
-                <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,.03)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,.03)_1px,transparent_1px)] bg-[size:50px_50px]"></div>
-                
-                <CardContent className="relative p-6 z-10">
+              {/* Performance Overview */}
+              <Card className="border-0 shadow-xl bg-gradient-to-br from-purple-600 via-pink-600 to-blue-600 text-white overflow-hidden relative">
+                <div className="absolute inset-0 bg-black/20"></div>
+                <div className="absolute top-0 right-0 w-64 h-64 bg-white/10 rounded-full filter blur-3xl"></div>
+                <CardContent className="relative p-6">
                   <div className="flex items-center gap-3 mb-6">
-                    <div className="p-3 bg-white/20 backdrop-blur-md rounded-2xl border border-white/30 shadow-lg hover:scale-110 transition-transform duration-300">
-                      <TrendingUp className="w-7 h-7 drop-shadow-[0_0_10px_rgba(255,255,255,0.8)]" />
+                    <div className="p-3 bg-white/20 backdrop-blur-sm rounded-xl">
+                      <TrendingUp className="w-6 h-6" />
                     </div>
                     <div>
-                      <h2 className="text-3xl font-black drop-shadow-lg">Performance Overview</h2>
-                      <p className="text-sm text-white/90 font-medium">🏆 Excellence in every metric</p>
+                      <h2 className="text-2xl font-bold">Performance Overview</h2>
+                      <p className="text-sm text-white/80">Excellence in every metric</p>
                     </div>
                   </div>
                   
                   <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-                    <div className="group bg-white/10 backdrop-blur-md rounded-2xl p-5 border border-white/20 hover:border-white/40 hover:bg-white/15 transition-all duration-300 hover:scale-105 hover:shadow-[0_0_30px_rgba(234,179,8,0.5)] relative overflow-hidden">
-                      <div className="absolute inset-0 bg-gradient-to-br from-yellow-500/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                      <Activity className="w-6 h-6 mb-2 text-yellow-300 drop-shadow-[0_0_10px_rgba(234,179,8,0.8)] group-hover:scale-110 transition-transform duration-300 relative z-10" />
-                      <p className="text-4xl font-black mb-1 drop-shadow-lg relative z-10">{employee.stats.rating}⭐</p>
-                      <p className="text-xs text-white/80 font-semibold relative z-10">Average Rating</p>
+                    <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4 border border-white/20">
+                      <Activity className="w-5 h-5 mb-2 text-yellow-300" />
+                      <p className="text-3xl font-bold mb-1">{employee.stats.rating}⭐</p>
+                      <p className="text-xs text-white/80">Average Rating</p>
                     </div>
-                    <div className="group bg-white/10 backdrop-blur-md rounded-2xl p-5 border border-white/20 hover:border-white/40 hover:bg-white/15 transition-all duration-300 hover:scale-105 hover:shadow-[0_0_30px_rgba(59,130,246,0.5)] relative overflow-hidden">
-                      <div className="absolute inset-0 bg-gradient-to-br from-blue-500/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                      <Video className="w-6 h-6 mb-2 text-blue-300 drop-shadow-[0_0_10px_rgba(59,130,246,0.8)] group-hover:scale-110 transition-transform duration-300 relative z-10" />
-                      <p className="text-4xl font-black mb-1 drop-shadow-lg relative z-10">{employee.stats.videos}</p>
-                      <p className="text-xs text-white/80 font-semibold relative z-10">Total Videos</p>
+                    <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4 border border-white/20">
+                      <Video className="w-5 h-5 mb-2 text-blue-300" />
+                      <p className="text-3xl font-bold mb-1">{employee.stats.videos}</p>
+                      <p className="text-xs text-white/80">Total Videos</p>
                     </div>
-                    <div className="group bg-white/10 backdrop-blur-md rounded-2xl p-5 border border-white/20 hover:border-white/40 hover:bg-white/15 transition-all duration-300 hover:scale-105 hover:shadow-[0_0_30px_rgba(34,197,94,0.5)] relative overflow-hidden">
-                      <div className="absolute inset-0 bg-gradient-to-br from-green-500/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                      <CheckCircle2 className="w-6 h-6 mb-2 text-green-300 drop-shadow-[0_0_10px_rgba(34,197,94,0.8)] group-hover:scale-110 transition-transform duration-300 relative z-10" />
-                      <p className="text-4xl font-black mb-1 drop-shadow-lg relative z-10">{employee.stats.tasks}</p>
-                      <p className="text-xs text-white/80 font-semibold relative z-10">Tasks Completed</p>
+                    <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4 border border-white/20">
+                      <CheckCircle2 className="w-5 h-5 mb-2 text-green-300" />
+                      <p className="text-3xl font-bold mb-1">{employee.stats.tasks}</p>
+                      <p className="text-xs text-white/80">Tasks Completed</p>
                     </div>
-                    <div className="group bg-white/10 backdrop-blur-md rounded-2xl p-5 border border-white/20 hover:border-white/40 hover:bg-white/15 transition-all duration-300 hover:scale-105 hover:shadow-[0_0_30px_rgba(236,72,153,0.5)] relative overflow-hidden">
-                      <div className="absolute inset-0 bg-gradient-to-br from-pink-500/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                      <Briefcase className="w-6 h-6 mb-2 text-pink-300 drop-shadow-[0_0_10px_rgba(236,72,153,0.8)] group-hover:scale-110 transition-transform duration-300 relative z-10" />
-                      <p className="text-4xl font-black mb-1 drop-shadow-lg relative z-10">{employee.stats.projects}</p>
-                      <p className="text-xs text-white/80 font-semibold relative z-10">Total Projects</p>
+                    <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4 border border-white/20">
+                      <Briefcase className="w-5 h-5 mb-2 text-pink-300" />
+                      <p className="text-3xl font-bold mb-1">{employee.stats.projects}</p>
+                      <p className="text-xs text-white/80">Total Projects</p>
                     </div>
                   </div>
                 </CardContent>
