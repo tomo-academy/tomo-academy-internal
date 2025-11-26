@@ -1,0 +1,14 @@
+# robots.txt for TOMO Academy Internal Management Tool
+# https://www.meow.tomoacademy.site
+
+User-agent: *
+Allow: /
+Disallow: /admin/
+Disallow: /api/
+Disallow: /monitoring/
+
+# Sitemap
+Sitemap: https://www.meow.tomoacademy.site/sitemap.xml
+
+# Crawl Delay
+Crawl-delay: 10

@@ -1,7 +1,7 @@
 // Application Constants
 export const APP_CONFIG = {
   // Domain Configuration
-  DOMAIN: 'https://www.tomoacademy.site',
+  DOMAIN: 'https://www.meow.tomoacademy.site',
   APP_NAME: 'TOMO Academy',
   
   // API Endpoints
@@ -17,9 +17,9 @@ export const APP_CONFIG = {
   
   // SEO Configuration
   DEFAULT_META: {
-    title: 'TOMO Academy - Digital Learning Platform',
-    description: 'TOMO Academy is a comprehensive digital learning platform offering high-quality educational content, tutorials, and resources for technology enthusiasts and learners.',
-    keywords: ['TOMO Academy', 'online learning', 'tutorials', 'education', 'technology', 'programming', 'web development'],
+    title: 'TOMO Academy - Internal Management Tool',
+    description: 'TOMO Academy Internal Management System - Comprehensive platform for team management, YouTube channel operations, employee profiles, task tracking, and content coordination. Internal tool for TOMO Academy staff.',
+    keywords: ['TOMO Academy', 'internal tool', 'team management', 'TOMO management', 'employee management', 'YouTube management', 'content management', 'internal platform', 'staff portal', 'task management', 'TOMO Academy internal'],
     image: '/TOMO.jpg'
   }
 };
