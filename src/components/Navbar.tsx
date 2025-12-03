@@ -2,12 +2,9 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { ThemeToggle } from "@/components/ui/theme-toggle";
-import { NotificationDropdown } from "@/components/ui/notifications";
-import UserSessionStatus from "./UserSessionStatus";
-import HeaderClock from "./HeaderClock";
+
 import { useAuth } from "@/contexts/AuthContext";
-import { Menu, X, Youtube, Shield, LogOut, User, Monitor } from "lucide-react";
-import { Badge } from "@/components/ui/badge";
+import { Menu, X, Shield, LogOut, User, Monitor } from "lucide-react";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -61,21 +58,7 @@ const Navbar = () => {
             <Link to="/videos" className="text-muted-foreground hover:text-foreground transition-fast">
               Videos
             </Link>
-            <Link to="/creator-pulse" className="text-muted-foreground hover:text-foreground transition-colors flex items-center gap-1 px-2 py-1 rounded-md hover:bg-primary/10">
-              <Youtube className="w-4 h-4" />
-              <span className="hidden lg:inline">Creator Pulse</span>
-              <Badge variant="secondary" className="text-xs bg-gradient-to-r from-purple-500 to-blue-500 text-white border-0">AI</Badge>
-            </Link>
-            <Link to="/tasks" className="text-muted-foreground hover:text-foreground transition-fast">
-              Tasks
-            </Link>
-            <Link to="/resources" className="text-muted-foreground hover:text-foreground transition-fast">
-              Resources
-            </Link>
-            <HeaderClock className="flex-shrink-0" />
-            <NotificationDropdown />
             <ThemeToggle />
-            <UserSessionStatus />
           </div>
 
           <div className="flex md:hidden items-center gap-2">
@@ -137,32 +120,6 @@ const Navbar = () => {
             >
               Videos
             </Link>
-            <Link
-              to="/creator-pulse"
-              className="block px-4 py-3 text-muted-foreground hover:text-foreground hover:bg-muted rounded-lg transition-colors flex items-center gap-2 touch-manipulation"
-            >
-              <Youtube className="w-5 h-5" />
-              Creator Pulse
-              <Badge variant="secondary" className="text-xs bg-gradient-to-r from-purple-500 to-blue-500 text-white border-0">AI</Badge>
-            </Link>
-            <Link
-              to="/tasks"
-              className="block px-4 py-2 text-muted-foreground hover:text-foreground hover:bg-muted rounded-lg transition-fast"
-            >
-              Tasks
-            </Link>
-            <Link
-              to="/resources"
-              className="block px-4 py-2 text-muted-foreground hover:text-foreground hover:bg-muted rounded-lg transition-fast"
-            >
-              Resources
-            </Link>
-            <div className="px-4 py-2 border-t border-border mt-2 pt-3 flex justify-center">
-              <HeaderClock />
-            </div>
-            <div className="px-4 space-y-2">
-              <UserSessionStatus />
-            </div>
           </div>
         )}
       </div>
